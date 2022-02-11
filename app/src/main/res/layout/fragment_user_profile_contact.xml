@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".fragment.UserProfileInformationFragment">
+
+    <ImageView
+        android:id="@+id/user_profile_contact_email_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/circle_background"
+        android:padding="8dp"
+        android:src="@drawable/email_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/user_profile_contact_email_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:text="Placeholder"
+        android:textSize="28sp"
+        app:autoSizeMaxTextSize="28sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="@+id/user_profile_contact_email_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/user_profile_contact_email_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <TextView
+        android:id="@+id/user_profile_contact_email_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/user_profile_contact_email_label"
+        android:textColor="@color/main_color"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/user_profile_contact_email_icon"
+        app:layout_constraintStart_toEndOf="@+id/user_profile_contact_email_icon" />
+
+    <ImageView
+        android:id="@+id/user_profile_contact_phone_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/circle_background"
+        android:padding="8dp"
+        android:src="@drawable/phone_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_profile_contact_email_icon" />
+
+    <TextView
+        android:id="@+id/user_profile_contact_phone_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="32dp"
+        android:gravity="center_vertical"
+        android:text="Placeholder"
+        android:textSize="28sp"
+        app:autoSizeMaxTextSize="28sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="@+id/user_profile_contact_phone_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/user_profile_contact_phone_icon"
+        app:layout_constraintTop_toTopOf="@+id/user_profile_contact_phone_icon"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <TextView
+        android:id="@+id/user_profile_contact_phone_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/user_profile_contact_phone_label"
+        android:textColor="@color/main_color"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/user_profile_contact_phone_icon"
+        app:layout_constraintStart_toEndOf="@+id/user_profile_contact_phone_icon" />
+
+    <ImageView
+        android:id="@+id/user_profile_contact_cellphone_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/circle_background"
+        android:padding="8dp"
+        android:src="@drawable/cellphone_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_profile_contact_phone_icon" />
+
+    <TextView
+        android:id="@+id/user_profile_contact_cellphone_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="32dp"
+        android:gravity="center_vertical"
+        android:text="Placeholder"
+        android:textSize="28sp"
+        app:autoSizeMaxTextSize="28sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="@+id/user_profile_contact_cellphone_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/user_profile_contact_cellphone_icon"
+        app:layout_constraintTop_toTopOf="@+id/user_profile_contact_cellphone_icon"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <TextView
+        android:id="@+id/user_profile_contact_cellphone_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/user_profile_contact_cell_label"
+        android:textColor="@color/main_color"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/user_profile_contact_cellphone_icon"
+        app:layout_constraintStart_toEndOf="@+id/user_profile_contact_cellphone_icon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

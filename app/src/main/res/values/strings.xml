@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">Kaleb Olson Interview App</string>
+    <string name="user_profile_list_header">Users</string>
+    <string name="api_error">There was an error accessing the random user API. Please check your internet connection.</string>
+    <string name="filter_dialog_title">Filter by:</string>
+
+    <string name="user_profile_info_tab_title">Info</string>
+    <string name="user_profile_contact_tab_title">Contact</string>
+    <string name="user_profile_location_tab_title">Location</string>
+    <string name="user_profile_info_full_name_label">Name</string>
+    <string name="user_profile_info_gender_label">Gender</string>
+    <string name="user_profile_info_age_label">Age</string>
+    <string name="user_profile_info_birthday_label">Birthday</string>
+    <string name="user_profile_contact_email_label">Email</string>
+    <string name="user_profile_contact_phone_label">Phone</string>
+    <string name="user_profile_contact_cell_label">Cell</string>
+    <string name="user_profile_location_address_label">Address</string>
+
+    <string-array name="filter_options">
+        <item>Male</item>
+        <item>Female</item>
+        <item>Age &lt; 50</item>
+        <item>Age &gt; 50</item>
+        <item>No filter</item>
+    </string-array>
+</resources>

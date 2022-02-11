@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".fragment.UserProfileInformationFragment">
+
+    <ImageView
+        android:id="@+id/user_profile_information_name_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/circle_background"
+        android:padding="4dp"
+        android:src="@drawable/name_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/user_profile_information_name_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="32dp"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:text="Placeholder"
+        android:textSize="28sp"
+        app:autoSizeMaxTextSize="28sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="@+id/user_profile_information_name_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/user_profile_information_name_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <TextView
+        android:id="@+id/user_profile_information_name_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/user_profile_info_full_name_label"
+        android:textColor="@color/main_color"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/user_profile_information_name_icon"
+        app:layout_constraintStart_toEndOf="@+id/user_profile_information_name_icon" />
+
+    <ImageView
+        android:id="@+id/user_profile_information_gender_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/circle_background"
+        android:padding="8dp"
+        android:src="@drawable/gender_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_profile_information_name_icon" />
+
+    <TextView
+        android:id="@+id/user_profile_information_gender_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="32dp"
+        android:gravity="fill_vertical"
+        android:maxLines="1"
+        android:text="Placeholder"
+        android:textSize="28sp"
+        app:autoSizeMaxTextSize="28sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="@+id/user_profile_information_gender_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/user_profile_information_gender_icon"
+        app:layout_constraintTop_toTopOf="@+id/user_profile_information_gender_icon"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <TextView
+        android:id="@+id/user_profile_information_gender_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/user_profile_info_gender_label"
+        android:textColor="@color/main_color"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/user_profile_information_gender_icon"
+        app:layout_constraintStart_toEndOf="@+id/user_profile_information_gender_icon" />
+
+    <ImageView
+        android:id="@+id/user_profile_information_age_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/circle_background"
+        android:padding="8dp"
+        android:src="@drawable/age_icon"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_profile_information_gender_icon" />
+
+    <TextView
+        android:id="@+id/user_profile_information_age_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="32dp"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:text="Placeholder"
+        android:textSize="28sp"
+        app:autoSizeMaxTextSize="28sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="@+id/user_profile_information_age_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/user_profile_information_age_icon"
+        app:layout_constraintTop_toTopOf="@+id/user_profile_information_age_icon"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <TextView
+        android:id="@+id/user_profile_information_age_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/user_profile_info_age_label"
+        android:textColor="@color/main_color"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/user_profile_information_age_icon"
+        app:layout_constraintStart_toEndOf="@+id/user_profile_information_age_icon" />
+
+    <ImageView
+        android:id="@+id/user_profile_information_birthday_icon"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="32dp"
+        android:background="@drawable/circle_background"
+        android:padding="8dp"
+        android:src="@drawable/birthday_icon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/user_profile_information_age_icon"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/user_profile_information_birthday_text_view"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="14dp"
+        android:layout_marginEnd="32dp"
+        android:gravity="center_vertical"
+        android:maxLines="1"
+        android:text="Placeholder"
+        android:textSize="28sp"
+        app:autoSizeMaxTextSize="28sp"
+        app:autoSizeTextType="uniform"
+        app:layout_constraintBottom_toBottomOf="@+id/user_profile_information_birthday_icon"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/user_profile_information_birthday_icon"
+        app:layout_constraintTop_toTopOf="@+id/user_profile_information_birthday_icon"
+        app:layout_constraintVertical_bias="0.2" />
+
+    <TextView
+        android:id="@+id/user_profile_information_birthday_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="@string/user_profile_info_birthday_label"
+        android:textColor="@color/main_color"
+        android:textSize="11sp"
+        app:layout_constraintBottom_toBottomOf="@+id/user_profile_information_birthday_icon"
+        app:layout_constraintStart_toEndOf="@+id/user_profile_information_birthday_icon" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
