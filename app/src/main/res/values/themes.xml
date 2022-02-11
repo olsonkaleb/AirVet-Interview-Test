@@ -1,10 +1,8 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
     <style name="Theme.AirVetInterviewTest" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <item name="colorPrimary">#0066FF</item>
-        <item name="colorPrimaryVariant">#0066FF</item>
-        <item name="colorOnPrimary">@color/white</item>
-        <item name="colorOnSecondary">@color/black</item>
-        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimaryVariant</item>
+        <item name="colorAccent">?attr/colorPrimary</item>
+        <item name="android:statusBarColor" tools:targetApi="l">?attr/colorPrimary</item>
     </style>
 
     <style name="Theme.AirVetInterviewTest.NoActionBar">

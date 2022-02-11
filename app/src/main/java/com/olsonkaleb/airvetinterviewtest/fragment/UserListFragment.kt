@@ -40,10 +40,13 @@ class UserListFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         viewModel.profiles.observe(viewLifecycleOwner) {
-            binding.profileList.layoutManager = LinearLayoutManager(requireActivity())
-            listAdapter = UserProfileListAdapter { profile -> onProfileSelected(profile) }
-            filterProfiles()
-            binding.profileList.adapter = listAdapter
+            if (viewModel.profiles.value != null) {
+                binding.profileList.layoutManager = LinearLayoutManager(requireActivity())
+                listAdapter = UserProfileListAdapter { profile -> onProfileSelected(profile) }
+                filterProfiles()
+                binding.profileList.adapter = listAdapter
+            }
+            binding.userProfileListLoadingBar.visibility = View.GONE
         }
 
         binding.filterUsersFab.setOnClickListener {

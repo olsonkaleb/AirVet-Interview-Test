@@ -33,6 +33,7 @@ class MainActivity : AppCompatActivity(), OnMapReadyCallback {
             RandomUserApiClient(this).getRandomUsers(50, {
                 profiles -> viewModel.profiles.value = profiles
             }, {
+                viewModel.profiles.value = null
                 Toast.makeText(this, R.string.api_error, Toast.LENGTH_LONG).show()
             })
         }
