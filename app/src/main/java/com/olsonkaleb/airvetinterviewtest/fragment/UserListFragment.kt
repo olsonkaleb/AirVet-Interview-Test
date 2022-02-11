@@ -43,7 +43,7 @@ class UserListFragment : Fragment() {
             if (viewModel.profiles.value != null) {
                 binding.profileList.layoutManager = LinearLayoutManager(requireActivity())
                 listAdapter = UserProfileListAdapter { profile -> onProfileSelected(profile) }
-                filterProfiles()
+                refreshProfilesWithFilter()
                 binding.profileList.adapter = listAdapter
             }
             binding.userProfileListLoadingBar.visibility = View.GONE
@@ -53,7 +53,7 @@ class UserListFragment : Fragment() {
             val builder = AlertDialog.Builder(requireActivity())
             builder.setTitle(R.string.filter_dialog_title).setItems(R.array.filter_options) { _, which ->
                 currentFilter = FilterMode.values()[which]
-                filterProfiles()
+                refreshProfilesWithFilter()
             }.show()
         }
     }
@@ -63,35 +63,18 @@ class UserListFragment : Fragment() {
         _binding = null
     }
 
-    private fun filterProfiles() {
+    private fun refreshProfilesWithFilter() {
         if (viewModel.profiles.value == null)
             return
 
         val filteredProfiles = ArrayList<UserProfile>()
-
-        when (currentFilter) {
-            FilterMode.Male ->
-                for (profile in viewModel.profiles.value!!) {
-                    if (profile.gender == "Male")
-                        filteredProfiles.add(profile)
-                }
-            FilterMode.Female ->
-                for (profile in viewModel.profiles.value!!) {
-                    if (profile.gender == "Female")
-                        filteredProfiles.add(profile)
-                }
-            FilterMode.UnderFifty ->
-                for (profile in viewModel.profiles.value!!) {
-                    if (profile.age.toInt() < 50)
-                        filteredProfiles.add(profile)
-                }
-            FilterMode.OverFifty ->
-                for (profile in viewModel.profiles.value!!) {
-                    if (profile.age.toInt() >= 50)
-                        filteredProfiles.add(profile)
-                }
-            FilterMode.None ->
-                filteredProfiles.addAll(viewModel.profiles.value!!)
+        for (profile in viewModel.profiles.value!!) {
+            if (currentFilter == FilterMode.Male && profile.gender == "Male"
+                || currentFilter == FilterMode.Female && profile.gender == "Female"
+                || currentFilter == FilterMode.UnderFifty && profile.age.toInt() < 50
+                || currentFilter == FilterMode.OverFifty && profile.age.toInt() >= 50
+                || currentFilter == FilterMode.None)
+                filteredProfiles.add(profile)
         }
 
         listAdapter.setItems(filteredProfiles)
